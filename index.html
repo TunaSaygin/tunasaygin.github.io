@@ -251,6 +251,34 @@
       padding: 4px 10px;
     }
 
+    .pub-layout {
+      display: flex;
+      gap: 12px;
+      align-items: flex-start;
+    }
+
+    .pub-teaser-link {
+      display: inline-block;
+      flex: 0 0 170px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      overflow: hidden;
+      background: #fff;
+    }
+
+    .pub-teaser-frame {
+      width: 170px;
+      height: 110px;
+      border: 0;
+      display: block;
+      pointer-events: none;
+    }
+
+    .pub-main {
+      min-width: 0;
+      flex: 1 1 auto;
+    }
+
     .teaching .where,
     .publications .where {
       font-size: 14px;
@@ -281,6 +309,9 @@
       .page { grid-template-columns: 1fr; }
       .sidebar { position: static; }
       .main-top h1 { font-size: 28px; }
+      .pub-layout { flex-direction: column; }
+      .pub-teaser-link { width: 100%; max-width: 280px; }
+      .pub-teaser-frame { width: 100%; max-width: 280px; }
     }
   </style>
 </head>
@@ -357,16 +388,26 @@
         <section class="section publications" id="publications">
           <h2>Publications</h2>
           <article class="item">
-            <div class="row">
-              <span class="where">GeoFusionLRM: Geometry-Aware Self-Correction for Consistent 3D Reconstruction</span>
-              <span class="when">2026</span>
-            </div>
-            <p class="desc">*Ahmet Burak Yildirim, *Tuna Saygin, Duygu Ceylan, Aysegul Dundar. EuroGraphics 2026.</p>
-            <div class="pub-links">
-              <a class="pub-link" href="https://geofusionlrm.abyildirim.com" target="_blank" rel="noreferrer">Project</a>
-              <!-- <a class="pub-link" href="https://YOUR_PAPER_URL" target="_blank" rel="noreferrer">Paper (PDF)</a> -->
-              <!-- <a class="pub-link" href="https://arxiv.org/abs/YOUR_ID" target="_blank" rel="noreferrer">arXiv</a> -->
-              <!-- <a class="pub-link" href="https://github.com/YOUR_REPO" target="_blank" rel="noreferrer">Code</a> -->
+            <div class="pub-layout">
+              <a class="pub-teaser-link" href="teaser.pdf" target="_blank" rel="noreferrer" aria-label="Open GeoFusionLRM teaser PDF">
+                <object class="pub-teaser-frame" data="teaser.pdf#page=1&view=FitH" type="application/pdf">
+                  <span class="pub-link">Teaser PDF</span>
+                </object>
+              </a>
+              <div class="pub-main">
+                <div class="row">
+                  <span class="where">GeoFusionLRM: Geometry-Aware Self-Correction for Consistent 3D Reconstruction</span>
+                  <span class="when">2026</span>
+                </div>
+                <p class="desc">*Ahmet Burak Yildirim, *Tuna Saygin, Duygu Ceylan, Aysegul Dundar. EuroGraphics 2026.</p>
+                <div class="pub-links">
+                  <a class="pub-link" href="https://geofusionlrm.abyildirim.com" target="_blank" rel="noreferrer">Project</a>
+                  <a class="pub-link" href="teaser.pdf" target="_blank" rel="noreferrer">Teaser</a>
+                  <!-- <a class="pub-link" href="https://YOUR_PAPER_URL" target="_blank" rel="noreferrer">Paper (PDF)</a> -->
+                  <!-- <a class="pub-link" href="https://arxiv.org/abs/YOUR_ID" target="_blank" rel="noreferrer">arXiv</a> -->
+                  <!-- <a class="pub-link" href="https://github.com/YOUR_REPO" target="_blank" rel="noreferrer">Code</a> -->
+                </div>
+              </div>
             </div>
           </article>
 
