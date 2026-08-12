@@ -4,9 +4,9 @@
   <meta charset="utf-8" />
   <script src="https://www.w3counter.com/tracker.js?id=157201"></script>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Tuna Saygin | MSc Student at Bilkent University</title>
-  <meta name="description" content="Tuna Saygın - MSc Computer Science at Bilkent University. Research in 3D reconstruction, video diffusion, geometry-aware models.">
-<meta name="keywords" content="Tuna Saygın, Bilkent, Computer Vision, 3D Reconstruction, Diffusion Models">
+  <title>Tuna Saygin | Controllable Generative Models &amp; 3D Reconstruction</title>
+  <meta name="description" content="Tuna Saygin is an MSc student at Bilkent University researching controllable generative models, video generation and editing, 3D reconstruction, and generative model interpretability." />
+  <meta name="keywords" content="Tuna Saygin, Tuna Saygın, Bilkent University, Computer Vision, Generative Models, Controllable Generation, Video Generation, Video Editing, 3D Reconstruction, Diffusion Models, Flow Models, Generative Model Interpretability" />
   <style>
     :root {
       --bg: #f5f8fc;
@@ -194,6 +194,43 @@
       font-size: 15px;
     }
 
+    .research-focus {
+      margin-top: 14px;
+    }
+
+    .research-tags,
+    .paper-tags,
+    .project-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+    }
+
+    .research-tags span,
+    .paper-tags span,
+    .project-tags span {
+      display: inline-flex;
+      align-items: center;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+    }
+
+    .research-tags span {
+      padding: 4px 9px;
+      background: var(--accent-soft);
+      border-color: var(--line);
+      color: var(--accent);
+      font-size: 12px;
+      font-weight: 600;
+    }
+
+    .research-questions {
+      margin-top: 7px;
+      color: var(--muted);
+      font-size: 12px;
+      letter-spacing: 0.02em;
+    }
+
     .section {
       border: 1px solid var(--line);
       border-radius: var(--radius);
@@ -234,6 +271,70 @@
     .when { color: var(--muted); font-size: 13px; }
     .desc { margin: 4px 0 0; color: #3f5b78; font-size: 14px; }
     .venue { margin: 4px 0 0; color: #2f4f6f; font-size: 12px; font-weight: 600; }
+
+    .contribution {
+      margin: 7px 0 0;
+      color: #304a64;
+      font-size: 14px;
+      line-height: 1.5;
+    }
+
+    .paper-tags,
+    .project-tags {
+      margin-top: 8px;
+    }
+
+    .paper-tags span,
+    .project-tags span {
+      padding: 2px 7px;
+      background: var(--paper);
+      color: var(--muted);
+      font-size: 11px;
+    }
+
+    .authors {
+      margin: 7px 0 0;
+      color: var(--muted);
+      font-size: 12px;
+    }
+
+    .project-figure-link {
+      display: block;
+      margin-top: 8px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      overflow: hidden;
+      background: var(--paper);
+    }
+
+    .project-figure {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+
+    .project-gallery {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 7px;
+      margin-top: 8px;
+    }
+
+    .project-gallery figure {
+      margin: 0;
+      min-width: 0;
+    }
+
+    .project-gallery .project-figure-link {
+      margin-top: 0;
+    }
+
+    .project-gallery figcaption {
+      margin-top: 3px;
+      color: var(--muted);
+      font-size: 11px;
+      text-align: center;
+    }
 
     .pub-links {
       display: flex;
@@ -314,6 +415,7 @@
       .pub-layout { flex-direction: column; }
       .pub-teaser-link { width: 100%; max-width: 280px; }
       .pub-teaser-frame { width: 100%; max-width: 280px; }
+      .project-gallery { grid-template-columns: repeat(2, minmax(0, 1fr)); }
     }
   </style>
 </head>
@@ -400,7 +502,17 @@
         <section class="main-top" id="about">
           <h1>About Me</h1>
           <p>
-            I am an MSc student in Computer Science at Bilkent University, advised by Assoc. Prof. Aysegul Dundar. I work on 3D reconstruction and video generation, focusing on geometry-aware models and diffusion-based editing.          </p>
+            I am an MSc student in Computer Science at Bilkent University, advised by <a href="https://www.cs.bilkent.edu.tr/~adundar/" target="_blank" rel="noreferrer">Assoc. Prof. Aysegul Dundar</a>. I work on controllable generative models and 3D reconstruction. My research interests center on understanding how generative models represent geometry, motion, and interactions, and how their internal representations can be leveraged for more controllable and consistent generation and editing.
+          </p>
+          <div class="research-focus" aria-label="Research focus">
+            <div class="research-tags">
+              <span>Controllable Generation</span>
+              <span>3D Reconstruction</span>
+              <span>Video Generation &amp; Editing</span>
+              <span>Generative Model Interpretability</span>
+            </div>
+            <div class="research-questions">Geometry &middot; Motion &middot; Controllable Generation</div>
+          </div>
         </section>
 
         <section class="section publications" id="publications">
@@ -417,7 +529,8 @@
                   <span class="where">GeoFusionLRM: Geometry-Aware Self-Correction for Consistent 3D Reconstruction</span>
                 </div>
                 <p class="venue">EuroGraphics 2026</p>
-                <p class="desc">*Ahmet Burak Yildirim, *Tuna Saygin, Duygu Ceylan, Aysegul Dundar.</p>
+                <p class="contribution">A geometry-aware self-correction framework for improving consistency in feed-forward 3D reconstruction.</p>
+                <p class="authors">*Ahmet Burak Yildirim, *Tuna Saygin, Duygu Ceylan, Aysegul Dundar.</p>
                 <div class="pub-links">
                   <a class="pub-link" href="https://geofusionlrm.abyildirim.com" target="_blank" rel="noreferrer">Project</a>
                   <!-- <a class="pub-link" href="teaser.pdf" target="_blank" rel="noreferrer">Teaser</a> -->
@@ -441,28 +554,73 @@
             </div>
           </article> -->
           <p class="muted">* indicates equal contribution.</p>
+          <div class="paper-tags" aria-label="Publication research areas">
+            <span>3D Reconstruction</span>
+            <span>Geometry-Aware Models</span>
+            <span>Self-Correction</span>
+          </div>
         </section>
 
         <section class="section" id="course-projects">
           <h2>Related Course Projects</h2>
           <article class="item">
             <div class="row">
-              <span class="where">Soft Actor-Critic with Hindsight Experience Replay</span>
-              <span class="when">CS449 — Learning for Robotics</span>
+              <span class="where">Unsupervised Interpretable Direction Discovery Using h-Space</span>
+              <span class="when">CS485 — Deep Generative Networks</span>
             </div>
-            <p class="desc">An implementation of Soft Actor-Critic with Hindsight Experience Replay for goal-conditioned reinforcement learning.</p>
+            <a class="project-figure-link" href="interpretable_directions_pipeline.png" target="_blank" rel="noreferrer" aria-label="Open the interpretable direction discovery pipeline diagram at full size">
+              <img class="project-figure" src="interpretable_directions_pipeline.png" alt="Pipeline for discovering and applying interpretable editing directions in diffusion-model h-space" loading="lazy" />
+            </a>
+            <p class="contribution">Exploring whether interpretable editing directions can be discovered without supervision in the h-space of diffusion models.</p>
+            <div class="project-tags" aria-label="Project research areas">
+              <span>Diffusion Models</span>
+              <span>Interpretable Direction Discovery</span>
+              <span>Representation Analysis</span>
+            </div>
             <div class="pub-links">
-              <a class="pub-link" href="https://github.com/TunaSaygin/Soft-actor-criticwith-HER" target="_blank" rel="noreferrer">GitHub</a>
+              <a class="pub-link" href="https://github.com/TunaSaygin/IntepretableDirectionInDiffusion" target="_blank" rel="noreferrer">GitHub</a>
             </div>
           </article>
           <article class="item">
             <div class="row">
-              <span class="where">Unsupervised Interpretable Direction Discovery Using h-Space</span>
-              <span class="when">CS485 — Deep Generative Networks</span>
+              <span class="where">Soft Actor-Critic with Hindsight Experience Replay</span>
+              <span class="when">CS449 — Learning for Robotics</span>
             </div>
-            <p class="desc">Discovering interpretable, unsupervised editing directions in the h-space of diffusion models.</p>
+            <p class="contribution">Investigating how hindsight relabeling can improve sample efficiency for Soft Actor-Critic in goal-conditioned tasks.</p>
+            <div class="project-tags" aria-label="Project research areas">
+              <span>Reinforcement Learning</span>
+              <span>Goal-Conditioned Learning</span>
+              <span>Soft Actor Critic</span>
+              <span>Hindsight Experience Replay</span>
+            </div>
+            <div class="project-gallery" aria-label="FetchPush policy progression across training">
+              <figure>
+                <a class="project-figure-link" href="assets/projects/sac-her/push_step_5000.gif" target="_blank" rel="noreferrer" aria-label="Open FetchPush animation at 5,000 training steps">
+                  <img class="project-figure" src="assets/projects/sac-her/push_step_5000.gif" alt="FetchPush policy behavior after 5,000 training steps" loading="lazy" />
+                </a>
+                <figcaption>5,000 steps</figcaption>
+              </figure>
+              <figure>
+                <a class="project-figure-link" href="assets/projects/sac-her/push_step_50000.gif" target="_blank" rel="noreferrer" aria-label="Open FetchPush animation at 50,000 training steps">
+                  <img class="project-figure" src="assets/projects/sac-her/push_step_50000.gif" alt="FetchPush policy behavior after 50,000 training steps" loading="lazy" />
+                </a>
+                <figcaption>50,000 steps</figcaption>
+              </figure>
+              <figure>
+                <a class="project-figure-link" href="assets/projects/sac-her/push_step_85000.gif" target="_blank" rel="noreferrer" aria-label="Open FetchPush animation at 85,000 training steps">
+                  <img class="project-figure" src="assets/projects/sac-her/push_step_85000.gif" alt="FetchPush policy behavior after 85,000 training steps" loading="lazy" />
+                </a>
+                <figcaption>85,000 steps</figcaption>
+              </figure>
+              <figure>
+                <a class="project-figure-link" href="assets/projects/sac-her/push_step_150000.gif" target="_blank" rel="noreferrer" aria-label="Open FetchPush animation at 150,000 training steps">
+                  <img class="project-figure" src="assets/projects/sac-her/push_step_150000.gif" alt="FetchPush policy behavior after 150,000 training steps" loading="lazy" />
+                </a>
+                <figcaption>150,000 steps</figcaption>
+              </figure>
+            </div>
             <div class="pub-links">
-              <a class="pub-link" href="https://github.com/TunaSaygin/IntepretableDirectionInDiffusion" target="_blank" rel="noreferrer">GitHub</a>
+              <a class="pub-link" href="https://github.com/TunaSaygin/Soft-actor-criticwith-HER" target="_blank" rel="noreferrer">GitHub</a>
             </div>
           </article>
         </section>
@@ -478,11 +636,17 @@
             <p class="desc">Our paper was accepted to EuroGraphics 2026.</p>
           </article>
         </section>
-
-        
-
         <section class="section teaching" id="teaching">
-          <h2>Teaching</h2>
+           <h2>Teaching & Academic Service</h2>
+            <h3 class="subsection-title">Academic Service</h3>
+            <article class="item">
+              <div class="row">
+                <span class="where">Pacific Graphics 2026</span>
+                <span class="when">2026</span>
+              </div>
+              <p class="desc">Reviewer</p>
+            </article>
+            <h3 class="subsection-title">Teaching</h3>
           <article class="item">
             <div class="row">
               <span class="where">CS464 - Introduction to Machine Learning</span>
